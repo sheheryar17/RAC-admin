@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color = "dark">
+    <ion-title text-center>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section text-center margin-bottom>
+    <ion-icon name="person"></ion-icon>
+    <h1 style="font-size:1.4em" no-margin>Welcome</h1>
+  </section>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="danger" (click) = "goToUrl()">
+          <ion-icon name="car"></ion-icon>
+          <h2>Add Car</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="danger">
+          <ion-icon name="logo-model-s"></ion-icon>
+          <h2>View Cars</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="danger">
+          <ion-icon name="settings"></ion-icon>
+          <h2>Update Car</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card text-center padding color="danger">
+          <ion-icon name="trash" size= "lg"></ion-icon>
+          <h2>Delete Car</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card text-center padding color="danger">
+          <ion-icon name="trending-up"></ion-icon>
+          <h2>View Reports</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

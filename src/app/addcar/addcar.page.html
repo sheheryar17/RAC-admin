@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href (click) = "navigate()"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Rent a Car Admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="">
+    <form [formGroup] = "registerCar" enctype="multipart/form-data">
+      <div class="ion-text-center">
+        <h3>Add a Car for Rent</h3>
+      </div>
+      <div class="ion-padding" enctype="multipart/form-data">
+        <ion-item>
+          <ion-input name = "reg" formControlName = "reg" type="text" placeholder="Registeration No" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="model" formControlName = "model" type="text" placeholder="Model"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="make" formControlName = "make" type="text" placeholder="Brand Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name = "year" formControlName = "year" maxlength="4" type="text" placeholder="Year" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="color" formControlName = "color" type="text" placeholder="Color"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="milage" formControlName = "milage" type="text" placeholder="Milage"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="price" formControlName = "price" type="text" placeholder="Price/Rent in Rupees"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Status</ion-label>
+          <ion-select formControlName = "status" name = "status">
+            <ion-select-option value = "available">Available</ion-select-option>
+            <ion-select-option value = "not Available">Not Available</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-input type = "file" formControlName = "image" name = "image" (change) = "selectImage($event)"></ion-input>
+        </ion-item>
+      </div>
+      <div class="ion-padding">
+        <ion-button size = "large" [disabled] = "registerCar.invalid" (click) = "save()" color = "primary" type = "submit" expand = "block">
+          Register
+        </ion-button>
+      </div>
+    </form>
+</ion-content>

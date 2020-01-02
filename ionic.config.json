@@ -1,0 +1,7 @@
+{
+  "name": "RAC-admin",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
